@@ -35,6 +35,28 @@ public class Product {
         this.stock = stock;
     }
 
+    //Funciones agregadas
+    public boolean isOutOfStock() {
+        return stock == 0;
+    }
+
+    public boolean isPriceGreaterThan(double value) {
+        return price > value;
+    }
+
+    public boolean isPriceLessThanOrEqualTo(double value) {
+        return price <= value;
+    }
+
+    public boolean doesNameContain(String keyword) {
+        return name.toLowerCase().contains(keyword.toLowerCase());
+    }
+
+
+
+
+
+
     @Override
     public String toString() {
         return "{ 'name':" + name + ", price:" + price + ", stock:" + stock + "}";
