@@ -1,6 +1,8 @@
 package org.example;
 
+import jdk.swing.interop.LightweightFrameWrapper;
 import org.example.model.Product;
+import org.example.model.ProductsArray;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,5 +43,22 @@ public class Main {
         } else {
             System.out.println("El nombre del producto no contiene la palabra clave: " + keyword);
         }
+
+
+        // Crear un array de productos
+        Product[] products = new Product[3]; // Puedes ajustar el tamaño según tus necesidades
+
+        // Agregar productos al array
+        products[0] = new Product("Crema", 10.99, 20);
+        products[1] = new Product("Almidon", 7.99, 15);
+        products[2] = new Product("Aros de cebolla 3", 5.49, 30);
+
+        ProductsArray prodcutsArray = new ProductsArray((products));
+
+        //System.out.println(prodcutsArray.getProductsByStartingLetter('c')[0]);
+        System.out.println(prodcutsArray.getProductsByStartingLetter('a')[0]);
+        System.out.println(prodcutsArray.getProductsByStartingLetter('a')[1]);
+
+
     }
 }
