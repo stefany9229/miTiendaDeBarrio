@@ -46,18 +46,23 @@ public class Main {
 
 
         // Crear un array de productos
-        Product[] products = new Product[3]; // Puedes ajustar el tamaño según tus necesidades
+        Product[] products = new Product[6]; // Puedes ajustar el tamaño según tus necesidades
 
         // Agregar productos al array
         products[0] = new Product("Crema", 10.99, 20);
         products[1] = new Product("Almidon", 7.99, 15);
         products[2] = new Product("Aros de cebolla 3", 5.49, 30);
+        products[3] = new Product("Zapayo", 10.99, 20);
+        products[4] = new Product("Yuca", 7.99, 15);
+        products[5] = new Product("Buñuelos", 5.49, 30);
 
         ProductsArray prodcutsArray = new ProductsArray((products));
 
         //System.out.println(prodcutsArray.getProductsByStartingLetter('c')[0]);
-        System.out.println(prodcutsArray.getProductsByStartingLetter('a')[0]);
-        System.out.println(prodcutsArray.getProductsByStartingLetter('a')[1]);
+        //System.out.println(prodcutsArray.getProductsByStartingLetter('a')[0]);
+       // System.out.println(prodcutsArray.getProductsByStartingLetter('a')[1]);
+
+        prodcutsArray.sortProducts();
 
 
     }

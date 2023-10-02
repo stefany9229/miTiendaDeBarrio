@@ -1,5 +1,7 @@
 package org.example.model;
 
+import java.util.Arrays;
+
 public class ProductsArray {
 
     private Product[] products;
@@ -49,10 +51,44 @@ public class ProductsArray {
         return arrayResponse;
     }
 
-    public Product[] sortProducts(){
-    return null;
+    public Product[] sortProducts() {
 
+        String[] nombres = new String[this.products.length];
+        Product[] arrayOrdenado = new Product[this.products.length];
+
+        // recorremos para extraer lo nombres y ordenarlos
+        for (int i = 0; i < this.products.length; i++) {
+            nombres[i] = this.products[i].getName();
+        }
+
+        // ordeno el array de nombres
+        Arrays.sort(nombres);
+
+
+        boolean bandera = true;
+        for (int i = 0; i < this.products.length; i++) {
+            int j = 0;
+
+            while (bandera || j < this.products.length) {
+
+                if ( nombres[i].equals(this.products[j].getName())) {
+                    arrayOrdenado[i] = this.products[j];
+                    bandera = false;
+                }
+
+                j++;
+            }
+
+
+        }
+        for( Product producto:arrayOrdenado ){
+            System.out.println(producto);
+        }
+        return arrayOrdenado;
     }
+
+
+
 
 
     @Override
