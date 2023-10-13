@@ -64,7 +64,7 @@ public class ProductsArray {
         // ordeno el array de nombres
         Arrays.sort(nombres);
 
-
+        // ponerlos en el nuevo array de manera ordenada
         boolean bandera = true;
         for (int i = 0; i < this.products.length; i++) {
             int j = 0;
